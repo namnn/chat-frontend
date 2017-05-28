@@ -59,6 +59,13 @@
                    logger.error("Unable to sign up!");
                } else {
                    logger.success("Successfully signed up!");
+
+                   var socket = io.connect("http://localhost:8000");
+                   socket.on('connect', function() {
+                       // Send signup event
+                       socket.emit('signup', objToSend.user);
+                   });
+
                    toggleView(1);
                }
             });

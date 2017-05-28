@@ -27,6 +27,7 @@
             vm.notification = {};
             vm.allNotification = {};
             vm.openchat = openchat;
+            vm.friends = [];
 
             //declare function
             vm.activateRightNotificationBar = activateRightNotificationBar;
@@ -40,16 +41,21 @@
             });
 
             $rootScope.$on("NewAnnouncement", function(event, data) {
-                console.log("announcement");
-                console.log(data);
-                if (!data || !vm.friends)
+                if (!data)
                     return;
                 for (var i = 0; i < vm.friends.length; i++) {
                     if (vm.friends[i].username == data.username) {
-                        vm.friends[i].status = data.status;
+                        vm.friends[i].online = data.online;
                         return;
                     }
                 }
+            });
+
+            $rootScope.$on("NewUser", function(event, data) {
+                if (!data)
+                    return;
+
+                vm.friends.push(data);
             });
 
             function getFriends() {

@@ -98,7 +98,9 @@
                     return;
 
                 logger.info(announcement.message);
-                $rootScope.$broadcast('NewAnnouncement', announcement.user);
+                $scope.$apply(function() {
+                    $rootScope.$broadcast('NewAnnouncement', announcement.user);
+                });
             });
 
             socket.on('disconnect', function() {
@@ -106,19 +108,28 @@
                 socket.emit('disconnect', vm.current);
             });
 
+            socket.on('newuser', function(user) {
+                $scope.$apply(function() {
+                    $rootScope.$broadcast("NewUser", user);
+                });
+            });
+
             socket.on('text', function(message) {
                 $scope.$apply(function() {
+                    var boxactive = false;
                     vm.chatboxes.filter(function(item) {
                         if (item.friend.username == message.username) {
                             item.conversation = {
                                 messages: item.conversation.messages ? item.conversation.messages : []
                             };
                             item.conversation.messages.push(message);
+                            boxactive = true;
                             return;
                         }
                     });
 
-                    logger.info(message.author + " just messaged you.");
+                    if (!boxactive)
+                        logger.info(message.author + " just messaged you.");
                 });
             });
 
