@@ -1,0 +1,32 @@
+<!-- right side bar -->
+
+<aside  id="rightNotificationBar" class="control-sidebar control-sidebar-dark">
+
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li><a href="" ng-click="vm.closeRightNotificationBar()"><i class="fa fa-times-circle-o" style="color:red;font-size:1.7em;"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <!-- Home tab content -->
+        <div>
+            <h3 class="control-sidebar-heading" style="margin-top:-10px">All Friends</h3>
+            <ul class="control-sidebar-menu">
+                <li ng-repeat = "list in vm.friends">
+                    <a href="" ng-click = "vm.openchat(list)">
+                        <i class="menu-icon fa fa-user bg-light-blue"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">{{list.first + ' ' + list.last}}</h4>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.control-sidebar-menu -->
+</aside>
+<!-- Add the sidebar's background. This div must be placed
+immediately after the control sidebar and should be left empty. -->
+<div class="control-sidebar-bg"></div>
+
+<!-- end right side bar -->

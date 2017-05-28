@@ -1,0 +1,480 @@
+/* Container class fixed width */
+.container {
+    max-width: 100%;
+}
+/* End container class fix */
+
+/*To do list table */
+.todo-table td.action-button{
+    float: right;
+}
+
+.todo-table button.add-item{
+   background-image: url("../images/icons/button-info.png");
+   background-color: transparent; /* make the button transparent */
+   background-repeat: no-repeat;  /* make the background image appear only once */
+   background-position: 0px 0px;  /* equivalent to 'top left' */
+   border: none;           /* assuming we don't want any borders */
+   cursor: pointer;        /* make the cursor like hovering over an <a> element */
+   height: 25px;           /* make this the size of your image */
+   padding-left: 16px;     /* make text start to the right of the image */
+   vertical-align: middle; /* align the text vertically centered */
+   margin-right: 20px !important;
+
+}
+
+.todo-table button.delete-item{
+   background-image: url("../images/icons/button-delete.png");
+   background-color: transparent; /* make the button transparent */
+   background-repeat: no-repeat;  /* make the background image appear only once */
+   background-position: 0px 0px;  /* equivalent to 'top left' */
+   border: none;           /* assuming we don't want any borders */
+   cursor: pointer;        /* make the cursor like hovering over an <a> element */
+   height: 25px;           /* make this the size of your image */
+   padding-left: 16px;     /* make text start to the right of the image */
+   vertical-align: middle; /* align the text vertically centered */
+}
+
+button.add-item{
+   background-image: url("../images/icons/button-plus.png");
+   background-color: transparent; /* make the button transparent */
+   background-repeat: no-repeat;  /* make the background image appear only once */
+   background-position: 0px 0px;  /* equivalent to 'top left' */
+   border: none;           /* assuming we don't want any borders */
+   cursor: pointer;        /* make the cursor like hovering over an <a> element */
+   height: 25px;           /* make this the size of your image */
+   padding-left: 16px;     /* make text start to the right of the image */
+   vertical-align: middle; /* align the text vertically centered */
+}
+
+.rounded-textfield{
+   border-radius: 5px;
+   border: 2px solid rgb(98,172,222);
+   background: transparent;
+   margin-bottom: 15px !important;
+}
+
+/*End to do list table*/
+
+/* ------------------------------ */
+/* ------ Staff directory ------- */
+/* ------------------------------ */
+
+
+
+/* The CSS classes in this section are somewhat generic.
+   most classes alter one or two aspects, and are intended
+   to be combined to produce the desired effects. */
+
+
+
+
+/*
+CSS for the admin's profile modal.
+Background colour: #ECF0F5
+*/
+
+
+.white {
+background:white !important;
+}
+
+.grey {
+background:#EEEEEE;
+}
+
+
+
+/*Button style things */
+.btn.btn-blue {
+	background: #1AA2D9; /* Make the button blue like in the directory mockups */
+}
+
+.btn.btn-grey {
+	background: #EEEEEE; /* Makes the button light grey like in the directory mockups */
+}
+
+.btn.btn-alphabet {
+  border-radius: 0; /* makes the button square */
+  width: 30px; /* Makes the button a fixed width, and roughly square, regardless of content */
+
+}
+
+.btn.btn-square {
+  border-radius: 0; /* makes the button square */
+}
+
+.button.button-left { /* Aligns button to the left (for modals) */
+	float: left;
+}
+
+
+
+
+
+/* Table style things */
+
+.no-overflow {
+	text-overflow: ellipsis; /* These two stop the text from overflowing the div */
+	overflow: hidden;
+}
+
+
+
+/* Directory Grid Box Style */
+.directory-box {
+	background: #FFFFFF; /* Makes background white */
+	border-style: solid; /* Adds a border to the box */
+	border-width: 1px; /* Makes the border very thin to mimic bootstrap panel design */
+	border-radius: 5px; /* Makes corners a little rounded to match bootstrap theme */
+	border-color: #DDDDDD; /* Makes border light grey, to match theme */
+	box-shadow: 1px 1px 0px #DBDBDB; /* Adds a very faint border, to match theme */
+	font-size: 15px; /* Increases font size a little to draw attention, and increase readability */
+	padding: 5px 5px 5px 5px; /* Gives box contents space between contents and border */
+	cursor: pointer; /* Makes cursor turn into hand, like with hyperlinks */
+
+	margin-left: 10px; /* Adds small spacing between box and element to the left.
+							Overriden for the leftmost boxes. */
+
+	text-overflow: ellipsis; /* These two stop the text from overflowing the div */
+	overflow: hidden;
+
+}
+
+.directory-box:hover {
+    background: #F5F5F5 ;
+    border-color: #CCCCCC ;
+    border-color: #F5F5F5 ;
+}
+
+img.profile-icon {
+    width: 75px;
+    height: 75px;
+}
+
+img.modal-icon {
+    width: 150px;
+    height: 150px;
+}
+
+modal-content.rounded-corners {
+    border-radius: 5px;
+    background: #000000;
+}
+
+.directory-name {
+	font-size: 24px;
+}
+
+.directory-department {
+	text-size: 10px;
+}
+
+
+
+
+/*	Generic style classes
+	Intended to be used for any class that needs them */
+
+.margin-left-25px {
+	margin-left: 25px; /* Gives largish space between element and the thing next to it */
+}
+
+.margin-left-10px {
+	margin-left: 10px; /* Gives small space between element and the thing next to it */
+}
+
+.fake-hyperlink {
+	cursor: pointer; /* Makes cursor turn into hand, like with hyperlinks */
+}
+
+
+
+/*
+these ones were partially from stackoverflow
+http://stackoverflow.com/questions/10085723/twitter-bootstrap-add-top-space-between-rows
+*/
+.top-buffer {
+	margin-top: 10px; /* Adds small line spacing between item and above elements */
+}
+.big-top-buffer {
+	margin-top: 25px; /* Adds big line spacing between item and above elements */
+}
+.no-left-margin {
+	margin-left: 0px; /* removes space between item and element to the left */
+}
+.no-bottom-margin {
+	margin-bottom: 0px; /* removes line spacing between item and elements below */
+}
+
+
+
+
+
+/* ------------------------------ */
+/* --- End of Staff Directory --- */
+/* ------------------------------ */
+
+/*Side menu icons*/
+
+.admin-logo{
+  background-image: url("../images/icons/Admin.png");
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: 0px 0px;  /* equivalent to 'top left' */
+  border: none;           /* assuming we don't want any borders */
+  cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  height: 12px;           /* make this the size of your image */
+  padding-left: 16px;     /* make text start to the right of the image */
+  vertical-align: middle; /* align the text vertically centered */
+  margin-right: 5px !important;
+}
+
+.application-logo{
+    background-image: url("../images/icons/Application.png");
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 12px;           /* make this the size of your image */
+    width: 15px;
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    margin-right: 5px !important;
+}
+
+.overtime-application-logo{
+    background-image: url("../images/icons/Overtime.png");
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 12px;           /* make this the size of your image */
+    width: 15px;
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    margin-right: 5px !important;
+}
+
+.leave-application-logo{
+    background-image: url("../images/icons/LeaveApp.png");
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 12px;           /* make this the size of your image */
+    width: 15px;
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    margin-right: 5px !important;
+}
+
+.application-review-logo{
+    background-image: url("../images/icons/AppReview.png");
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 12px;           /* make this the size of your image */
+    width: 15px;
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    margin-right: 5px !important;
+}
+
+.application-history-logo{
+    background-image: url("../images/icons/AppHistory.png");
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 12px;           /* make this the size of your image */
+    width: 15px;
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    margin-right: 5px !important;
+}
+
+.create-user-logo{
+  background-image: url("../images/icons/CreateUser.png");
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: 0px 0px;  /* equivalent to 'top left' */
+  border: none;           /* assuming we don't want any borders */
+  cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  height: 12px;           /* make this the size of your image */
+  padding-left: 16px;     /* make text start to the right of the image */
+  vertical-align: middle; /* align the text vertically centered */
+  margin-right: 5px !important;
+}
+
+.planner-logo{
+  background-image: url("../images/icons/Planner.png");
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: 0px 0px;  /* equivalent to 'top left' */
+  border: none;           /* assuming we don't want any borders */
+  cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  height: 15px;           /* make this the size of your image */
+  padding-left: 16px;     /* make text start to the right of the image */
+  vertical-align: middle; /* align the text vertically centered */
+  margin-right: 5px !important;
+}
+
+.to-do-list-logo{
+  background-image: url("../images/icons/ToDoList.png");
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: 0px 0px;  /* equivalent to 'top left' */
+  border: none;           /* assuming we don't want any borders */
+  cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  height: 12px;           /* make this the size of your image */
+  padding-left: 16px;     /* make text start to the right of the image */
+  vertical-align: middle; /* align the text vertically centered */
+  margin-right: 5px !important;
+}
+
+.calendar-logo{
+  background-image: url("../images/icons/Calendar.png");
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: 0px 0px;  /* equivalent to 'top left' */
+  border: none;           /* assuming we don't want any borders */
+  cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  height: 15px;           /* make this the size of your image */
+  padding-left: 16px;     /* make text start to the right of the image */
+  vertical-align: middle; /* align the text vertically centered */
+  margin-right: 5px !important;
+}
+
+.settings-logo{
+  background-image: url("../images/icons/Settings.png");
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: 0px 0px;  /* equivalent to 'top left' */
+  border: none;           /* assuming we don't want any borders */
+  cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  height: 15px;           /* make this the size of your image */
+  padding-left: 16px;     /* make text start to the right of the image */
+  vertical-align: middle; /* align the text vertically centered */
+  margin-right: 5px !important;
+}
+
+.staff-directory-logo{
+  background-image: url("../images/icons/StaffDirectory.png");
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: 0px 0px;  /* equivalent to 'top left' */
+  border: none;           /* assuming we don't want any borders */
+  cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  height: 15px;           /* make this the size of your image */
+  padding-left: 16px;     /* make text start to the right of the image */
+  vertical-align: middle; /* align the text vertically centered */
+  margin-right: 5px !important;
+}
+
+.logout-logo{
+  background-image: url("../images/icons/Logout.png");
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: 0px 0px;  /* equivalent to 'top left' */
+  border: none;           /* assuming we don't want any borders */
+  cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  height: 15px;           /* make this the size of your image */
+  padding-left: 16px;     /* make text start to the right of the image */
+  vertical-align: middle; /* align the text vertically centered */
+  margin-right: 5px !important;
+}
+
+.logout-title-color{
+  color: #aa726d;
+}
+/*END SIDE MENU ICONS*/
+
+/*Main template CSS*/
+
+.skin-black .wrapper, .skin-black .main-sidebar, .skin-black .left-side {  /* main side bar menu top background color */
+    background-color: #1F3A52 !important;
+}
+
+.skin-black .sidebar-menu>li.header {  /* main side bar menu list item background color */
+    color: #fff !important; /* font color */
+    background: #1F3A52 !important;
+}
+
+.skin-black .sidebar-menu>li:hover>a, .skin-black .sidebar-menu>li.active>a { /*hover color*/
+    background: #142431 !important;
+    border-left-color: #3D7EB3 !important; /* stick color */
+}
+
+.skin-black .treeview-menu>li>a {  /*Children list background color */
+    color: #8aa4af;
+    background-color: #1A2D3D !important;
+}
+
+.skin-black .sidebar-menu>li>.treeview-menu { /* styling of the color stick beside the children list */
+    background: #1A2D3D !important;
+}
+
+/*END MAIN TEMPLATE CSS*/
+
+
+/*right control bar */
+.control-sidebar{
+   overflow-y: auto;
+   height: 95vh;
+}
+/*end right control bar*/
+
+/*Dashboard news bar */
+.dashboard-box{
+    overflow-y: auto;
+    height: 40vh;
+}
+/*end Dashboard news bar*/
+
+/*News admin*/
+.news-table {
+    overflow-y: auto;
+    height: 60vh;
+}
+
+.row-list:hover {
+    background-color: white !important;
+}
+/*end News admin*/
+
+/*Application things*/
+.page-active {
+    background-color: red !important;
+    color: white !important;
+    pointer-events: none;
+    cursor: default;
+}
+/*End Application things*/
+
+/*Tab custom active*/
+.nav-tabs > li.my-active > a,
+.nav-tabs > li.my-active > a:hover,
+.nav-tabs > li.my-active > a:focus {
+    color: #555555;
+    cursor: default;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-bottom-color: transparent;
+}
+/*End Tab custom active*/
+
+/*add scroller for overflow content div*/
+
+.scroller-overflow-div{
+    overflow-y: auto;
+     height: 95vh;
+}
+
+/*end scroller for overflow content div*/

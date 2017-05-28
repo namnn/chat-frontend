@@ -1,0 +1,23 @@
+<div ng-controller="ShellController as vm">
+
+    <div ng-show="vm.adminLevel > -1">
+        <!-- check if user is logged in, if not hide sidebar and top nav -->
+        <ht-top-nav navline="vm.navline"></ht-top-nav>
+        <div ng-include="'app/layout/sidebar.html'"></div>
+    </div>
+
+    <div ngplus-overlay ngplus-overlay-delay-in="50" ngplus-overlay-delay-out="700" ngplus-overlay-animation="dissolve-animation">
+        <!--<img src="images/busy.gif" />-->
+        <div class="loading">Loading&#8230;</div>
+        <div class="page-spinner-message overlay-message">{{vm.busyMessage}}</div>
+    </div>
+    <div ui-view class="shuffle-animation"></div>
+
+
+    <div ng-include="'app/layout/footer.html'"></div>
+
+</div>
+
+<!-- Custom scripts -->
+<link href="style/preloader.css" rel="stylesheet" type="text/css" />
+<!-- End Custom scripts -->
