@@ -23,7 +23,6 @@
 
             var promises = [dataservice.hideSidebar()];
             return $q.all(promises).then(function() {
-                logger.info('Activated Login View');
             });
         }
 

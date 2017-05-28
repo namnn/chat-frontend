@@ -18,16 +18,19 @@
     <section class="content">
         <div class="container">
             <div class="row">
-                <div class="col-md-6" ng-repeat="box in vm.chatboxes track by $index">
+                <div class="col-md-6" ng-repeat="box in vm.chatboxes">
                     <div class="box box-primary direct-chat direct-chat-primary">
                         <div class="box-header with-border">
                             <h3 class="box-title">{{box.friend.first + ' ' + box.friend.last}}</h3>
 
                             <div class="box-tools pull-right">
                                 <span data-toggle="tooltip" title="" class="badge bg-light-blue" data-original-title="3 New Messages">3</span>
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                    <i class="fa fa-minus"></i>
                                 </button>
-                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove" ng-click="vm.removeBox(box)">
+                                    <i class="fa fa-times"></i>
+                                </button>
                             </div>
                         </div>
                         <!-- /.box-header -->
@@ -54,6 +57,8 @@
                                     </div>
                                     <!-- /.direct-chat-text -->
                                 </div>
+
+                                <p ng-if="box.typing">{{box.friend.first + " " + box.friend.last}} is typing...</p>
                                 <!-- /.direct-chat-msg -->
                             </div>
                             <!--/.direct-chat-messages-->
@@ -64,7 +69,9 @@
                         <div class="box-footer" style="display: block;">
                             <form>
                                 <div class="input-group">
-                                    <input type="text" name="message" placeholder="Type Message ..." class="form-control" ng-model="box.message">
+                                    <input type="text" name="message" placeholder="Type Message ..."
+                                           class="form-control" ng-model="box.message"
+                                           ng-change="vm.checkTyping(box)" ng-keyup="vm.stoppedTyping(box)">
                                     <span class="input-group-btn">
                                         <button type="submit" class="btn btn-primary btn-flat"
                                                 ng-click="vm.sendChat(box.message, vm.current, box.friend)">

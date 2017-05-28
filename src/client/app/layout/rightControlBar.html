@@ -16,7 +16,10 @@
                     <a href="" ng-click = "vm.openchat(list)">
                         <i class="menu-icon fa fa-user bg-light-blue"></i>
                         <div class="menu-info">
-                            <h4 class="control-sidebar-subheading">{{list.first + ' ' + list.last}}</h4>
+                            <h4 class="control-sidebar-subheading">
+                                {{list.first + ' ' + list.last}}
+                            </h4>
+                            <p ng-if="list.online"><i class="fa fa-circle text-success"></i> Online</p>
                         </div>
                     </a>
                 </li>

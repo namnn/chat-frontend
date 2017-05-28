@@ -38,6 +38,20 @@
                     getFriends();
                 }
             });
+
+            $rootScope.$on("NewAnnouncement", function(event, data) {
+                console.log("announcement");
+                console.log(data);
+                if (!data || !vm.friends)
+                    return;
+                for (var i = 0; i < vm.friends.length; i++) {
+                    if (vm.friends[i].username == data.username) {
+                        vm.friends[i].status = data.status;
+                        return;
+                    }
+                }
+            });
+
             function getFriends() {
                 return dataservice.getFriends().then(function(data) {
                     if (data === false) {
@@ -47,11 +61,6 @@
                     }
                 });
             }
-
-            $rootScope.$on("UpdateNotification", function(event, args) {
-                vm.notification = args.unreadnotification;
-                vm.allNotification = args.allNotification;
-            });
 
             activate();
 
